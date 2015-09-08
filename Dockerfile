@@ -16,7 +16,7 @@ RUN apt-get update -y && apt-get install -y unzip \
   && mv /opt/geoserver-$GEOSERVER_VERSION /opt/geoserver \
   && apt-get purge -y unzip \
   && apt-get clean && apt-get autoclean && apt-get --purge -y autoremove \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* geoserver-$GEOSERVER_VERSION-bin.zip
 
 # Creates geoserver user
 RUN addgroup --system geoserver \
